@@ -10,21 +10,12 @@ import ProtactedRoutes from "./ProtactedRoutes"
 const Mainroutes = () => {
   return <Routes>
   <Route path='/' element = {<Home/>} />
-  <Route path='/mybooking' element = {
-    <ProtactedRoutes>
-      <MyBooking/>
-      
-    </ProtactedRoutes>
-  } />
+  <Route path='/mybooking' element = { <MyBooking/>} />
   <Route path='/signup' element = {<Signup/>} />
   <Route path='/signin' element = {<Signin/>} />
   <Route path='/support' element = {<Support/>} />
   <Route path='/admindashboard' element = {<AdminDashboard/>} />
-  <Route path='/exploreclub' element = {
-    <ProtactedRoutes>
-      <ExploreClub/>
-    </ProtactedRoutes>
-  } />
+  <Route path='/exploreclub' element = {<ExploreClub/>} />
   </Routes>
 }
 

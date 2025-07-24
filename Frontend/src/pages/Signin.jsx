@@ -1,7 +1,7 @@
 import { Music } from 'lucide-react';
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from "react-router-dom";
-
+import { useAuth } from '../routes/AuthContext'
 
 const Signin = () => {
   const {
@@ -12,11 +12,18 @@ const Signin = () => {
   } = useForm();
   const password = watch('password', ''); // Watch the password field for confirmation validation
   const navigate = useNavigate()
+  const { login } = useAuth()
   const onSubmit = (data) => {
-    navigate('/')
-    console.log('Form Data:', data);
-    // Add your API call or signup logic here
+  // Mock user data - in real app, fetch this from an API
+  const userData = {
+    email: data.email,
+    name: 'Demo User',
+    token: 'fake-jwt-token', // if applicable
   };
+
+  login(userData); // This saves user in context and localStorage
+  navigate('/'); // Redirect after login
+};
   return (
     <div className="min-h-screen bg-gray-900 flex flex-col lg:flex-row">
       {/* Left Side - Branding */}
