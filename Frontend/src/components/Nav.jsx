@@ -18,7 +18,7 @@ const Nav = () => {
     }`;
 
   return (
-    <div className="bg-gray-800 flex justify-center items-center gap-15 px-15 py-6 text-white text-xl shadow-md">
+    <div className="bg-gray-800 flex justify-center items-center gap-15 px-15 py-2 text-white text-xl shadow-md">
       <NavLink to="/" className={navLinkClasses}>
         <Home size={18} />
         Home
