@@ -1,9 +1,9 @@
 // src/App.jsx
-import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Navbar from '../src/components/Nav';
 import Home from './pages/Home';
 import Signin from '../src/pages/Signin';
+import Signup from '../src/pages/Signup';
 import ExploreClub from './pages/ExploreClub';
 import MyBookings from '../src/pages/MyBooking';
 import Support from '../src/pages/Support';
@@ -16,7 +16,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Signin />} />
-
+        <Route path="/signup" element={<Signup />} />
         {/* Protected Routes */}
         <Route
           path="/exploreclub"

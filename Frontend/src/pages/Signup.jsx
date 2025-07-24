@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 
 const Signup = () => {
+
   const {
     register,
     handleSubmit,
@@ -15,7 +16,7 @@ const Signup = () => {
   const navigate = useNavigate() // Watch the password field for confirmation validation
 
   const onSubmit = (data) => {
-     navigate('/signin')
+     navigate('/login')
     console.log('Form Data:', data);
     // Add your API call or signup logic here
   };
